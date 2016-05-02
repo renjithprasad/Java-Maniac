@@ -1,0 +1,29 @@
+*********** ASN 3 PART 1 OUTPUT ************
+
+Printing TruckVehicle Details of truck :
+
+2014 Model Benz 300DTruck Having number plate MGB 456 with a fuel capacity of 100 liters has 2 passengers in it with kpl of 20.0 and will run 2000 kilometers
+And has a total Cargo area of : 2200.0
+
+*********************************************************************
+
+The data has been successfully written into output.txt
+The vehicle details are written in to a file output.txt and is ready to be loaded back
+
+
+Bonus Question : Output
+------------------------
+
+Please Wait: Reading from output.txt file and transfering data to the object ********
+
+The new Vehicle has been created after reading in from the file: Successfully read from the output.txt file.The details are:
+
+2013 Model volvo S60 Having number plate VGB 32 with a fuel capacity of 30 liters has 5 passengers in it with kpl of 18.0 and will run 540 kilometers
+
+
+2012 Model bmw 320d Having number plate IND 42 with a fuel capacity of 35 liters has 6 passengers in it with kpl of 20.0 and will run 700 kilometers
+
+
+2013 Model bajaj pulsar Having number plate HI 394 with a fuel capacity of 10 liters has 1 passengers in it with kpl of 50.0 and will run 500 kilometers
+
+

@@ -1,0 +1,14 @@
+package edu.neu.csye6200.ca;
+
+/**
+ * Created by Renjith on 3/28/2016.
+ */
+public class CARule {
+	
+    public static int NextGenState(int left, int middle, int right) {
+    	int[] ruleset = {0,1,0,1,1,0,1,0};
+    	String s = "" + left + middle + right;
+        int index = Integer.parseInt(s,2);
+        return ruleset[index];
+    }
+}

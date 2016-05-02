@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testforset" project="Practise" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="testforset" time="0.001">
+    <testcase name="testifnoelementinstart" classname="testforset" time="0.0"/>
+    <testcase name="testduplicatesarenotadded" classname="testforset" time="0.001"/>
+    <testcase name="testelementcanbeadded" classname="testforset" time="0.0"/>
+    <testcase name="testelementcanbedeleted" classname="testforset" time="0.0"/>
+  </testsuite>
+</testrun>

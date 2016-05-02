@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class VehicleRegistry {
+	
+	private ArrayList<Vehicle> carList = new ArrayList<Vehicle>();
+
+	public ArrayList<Vehicle> getCarList() {
+		return carList;
+	}
+
+	public void setCarList(ArrayList<Vehicle> carList) {
+		this.carList = carList;
+	}
+
+	public boolean remove(Object o) {
+		return carList.remove(o);
+	}
+
+}

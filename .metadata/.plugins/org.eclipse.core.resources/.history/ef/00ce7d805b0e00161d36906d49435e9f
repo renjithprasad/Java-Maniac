@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class createvm {
+	public static void main(String[] args) {
+		vmServer a = new vmServer();
+		for(int i=0; i<10; i++){
+			a.add();
+			System.out.println(a.get());
+		}
+		
+		
+	}
+
+	public static class vmServer {
+		List<Vm> a = null;
+
+		public vmServer() {
+			a = new ArrayList<Vm>();
+		}
+
+		public void add() {
+			Vm vm = new Vm(a.size());
+			a.add(vm);
+		}
+
+		public int get() {
+			return a.size();
+		}
+	}
+
+	public static class Vm {
+		private int i;
+
+		private Vm(int a) {
+			this.i = a;
+		}
+	}
+}

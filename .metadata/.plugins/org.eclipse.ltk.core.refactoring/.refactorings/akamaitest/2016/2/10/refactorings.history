@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;akamaitest.test1&apos; to &apos;Findsecondnonrepeatedelement&apos;&#x0A;- Original project: &apos;akamaitest&apos;&#x0A;- Original element: &apos;akamaitest.test1&apos;&#x0A;- Renamed element: &apos;akamaitest.Findsecondnonrepeatedelement&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;test1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;akamaitest{test1.java[test1" matchStrategy="1" name="Findsecondnonrepeatedelement" qualified="false" references="true" similarDeclarations="false" stamp="1456790136903" textual="false" version="1.0"/>
+</session>

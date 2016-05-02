@@ -1,0 +1,19 @@
+
+public class setImplementation {
+	int index;
+	private int[] elements;
+	
+	public setImplementation(int size) {
+		index = 0;
+		elements = new int[size];
+	}
+	
+	public void add(int number){
+		
+	}
+	
+	public int size(){
+		return elements.length;
+	}
+	
+}

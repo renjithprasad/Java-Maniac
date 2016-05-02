@@ -1,0 +1,17 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class testforset {
+	
+	setImplementation impl = new setImplementation(100);
+	
+	@Test
+	public void testduplicatesarenotadded(){
+		impl.add(3);
+		impl.add(3);
+		assertEquals(1, impl.size());
+	}
+	
+
+}

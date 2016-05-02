@@ -1,0 +1,25 @@
+/**
+ * CSYE 6200 Assignment #2 starter file
+ */
+
+/**
+ * A special class used to test the Vehicle class
+ * @author (Renjith Prasad)
+ * ID: (001716776)
+ *
+ */
+public class VehicleTest {
+
+	/**
+	 * This is where your program starts
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Vehicle minivan = new Vehicle(5,30,"volvo","S60",2013,18);
+	    Vehicle sportscar = new Vehicle(6,35,"bmw","320d",2012,20);
+	    
+	    System.out.println(minivan.modelYear + " Model " + minivan.make + minivan.model + " with a fuel capacity of " + minivan.fuelCap + " liters has " + minivan.passengers + " passengers in it and will run " + minivan.range() + " kilometers" );
+	    System.out.println(sportscar.modelYear + " Model " + sportscar.make + sportscar.model + " with a fuel capacity of " + sportscar.fuelCap + " liters has " + sportscar.passengers + " passengers in it and will run " + sportscar.range() + " kilometers" );
+	}
+
+}

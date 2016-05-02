@@ -1,0 +1,20 @@
+package edu.neu.csye6200.ca;
+
+/**
+ * Created by Apurva on 3/28/2016.
+ */
+public class CARule {
+
+    public static int getNextState(int left, int middle, int right) {
+        /*int average = 0;
+
+        int sum = left + middle + right;
+        if (sum > 0) {
+            average = sum / 3;
+        }
+
+        return average;*/
+    	String s = "" + left + middle + right;
+        int index = Integer.parseInt(s,2);
+    }
+}

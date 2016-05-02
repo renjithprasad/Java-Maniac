@@ -1,0 +1,36 @@
+package edu.neu.csye6200.ca;
+
+/**
+ * Created by Renjith on 3/28/2016.
+ */
+public class CAGeneration {
+    private CACell[] singleRowCell;
+
+    public CAGeneration() {
+    	singleRowCell = new CACell[64];
+        fillCACell();
+    }
+
+    private void fillCACell() {
+    	int mid = (singleRowCell.length/2);
+        for (int i = 0; i < singleRowCell.length; i++) {
+        	singleRowCell[i] = new CACell(i, 0);
+        	singleRowCell[mid] = new CACell(mid, 1);
+        }
+    }
+
+    public CACell[] getCaCells() {
+        return singleRowCell;
+    }
+
+    public void setCaCells(CACell[] caCells) {
+        this.singleRowCell = caCells;
+    }
+
+    public void printCaCells() {
+        for (CACell caCell : singleRowCell) {
+            System.out.print(caCell.getState() + " ");
+        }
+        System.out.println();
+    }
+}

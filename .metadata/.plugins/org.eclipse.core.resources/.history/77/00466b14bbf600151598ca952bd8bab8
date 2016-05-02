@@ -1,0 +1,38 @@
+package edu.neu.csye6200.ca;
+
+/**
+ * Created by Apurva on 3/28/2016.
+ */
+public class CACell {
+    private int State;
+    private int Generation;
+    private int Index;
+
+    public CACell(int index, int state){
+        Index = index;
+        State = state;
+        Generation = 0;
+    }
+    public int getState() {
+        return State;
+    }
+
+    public void setState(int state) {
+        this.State = state;
+    }
+
+    public int getGeneration() {
+        return Generation;
+    }
+
+
+    public void increaseGenerationNo() {
+        ++Generation;
+    }
+
+    public int getIndex() {
+        return Index;
+    }
+
+
+}

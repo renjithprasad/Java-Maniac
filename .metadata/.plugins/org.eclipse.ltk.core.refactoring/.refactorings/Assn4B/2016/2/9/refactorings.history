@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 5 elements to &apos;Assn2/src/edu.neu.csye6200.vehicle&apos;&#x0A;- Original project: &apos;Assn2&apos;&#x0A;- Destination element: &apos;Assn2/src/edu.neu.csye6200.vehicle&apos;&#x0A;- Original elements:&#x0A;     TruckVehicle.java&#x0A;     VehicleTest.java&#x0A;     RegistryIO.java&#x0A;     VehicleRegistry.java&#x0A;     Vehicle.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;edu.neu.csye6200.vehicle" element1="/src&lt;{TruckVehicle.java" element2="/src&lt;{VehicleTest.java" element3="/src&lt;{RegistryIO.java" element4="/src&lt;{VehicleRegistry.java" element5="/src&lt;{Vehicle.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1456101587150" units="5" version="1.0"/>
+</session>

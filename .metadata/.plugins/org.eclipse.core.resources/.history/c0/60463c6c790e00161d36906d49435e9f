@@ -1,0 +1,40 @@
+
+public class setImplementation {
+	int loc;
+	private int[] elements;
+	
+	public setImplementation(int size) {
+		loc = 0;
+		elements = new int[size];
+	}
+	
+	public boolean add(int number){
+		
+		for(int i=0;i<=loc;i++){
+			if(elements[i] != number){
+			  continue;
+			} else {
+				return false;
+			}
+		}
+		elements[loc++] = number;
+		return true;
+	}
+	
+	public void delete(int index){
+		if(index != loc+1){
+		while(index<loc)
+		elements[index] = elements[index+1];
+		index++;
+		loc--;
+		} else {
+			elements[index] = 0;
+			loc--;
+		}
+	}
+	
+	public int size(){
+		return loc;
+	}
+	
+}

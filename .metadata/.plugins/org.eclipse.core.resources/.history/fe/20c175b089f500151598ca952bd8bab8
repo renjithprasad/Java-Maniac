@@ -1,0 +1,36 @@
+package edu.neu.csye6200.ca;
+
+/**
+ * Created by Apurva on 3/28/2016.
+ */
+public class CAGeneration {
+    private CACell[] caCells;
+
+    public CAGeneration() {
+        caCells = new CACell[64];
+        fillCACell();
+    }
+
+    private void fillCACell() {
+    	int mid = (caCells.length/2);
+        for (int i = 0; i < caCells.length; i++) {
+            caCells[i] = new CACell(i, 0);
+            caCells[mid] = new CACell(mid, 1);
+        }
+    }
+
+    public CACell[] getCaCells() {
+        return caCells;
+    }
+
+    public void setCaCells(CACell[] caCells) {
+        this.caCells = caCells;
+    }
+
+    public void printCaCells() {
+        for (CACell caCell : caCells) {
+            System.out.print(caCell.getState() + " ");
+        }
+        System.out.println();
+    }
+}

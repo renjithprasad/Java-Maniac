@@ -1,0 +1,32 @@
+
+/**
+ * CSYE 6200 Vehicle starter class
+ * 
+ * @author (Renjith Prasad)
+ * ID: (001716776)
+ *
+ */
+public class Vehicle {
+   int passengers;
+   int fuelCap;
+   String make;
+   String model;
+   int modelYear;
+// Note - in the lecture, we switched from using Miles Per Gallon (MPG) to using Kilometers Per Liter (KPL).
+   double kpl; // <== so this should be 'kpl', not 'mpg'
+
+   Vehicle(int p, int fuel, String mak,String mod,int modYea,double k) {
+	   passengers = p;
+	   fuelCap = fuel;
+	   make = mak;
+	   model = mod;
+	   modelYear = modYea;
+	   kpl = k;
+	   }
+	   // Return the range.
+	   int range() {
+	   return (int) (kpl * fuelCap);
+	   }
+
+}
+

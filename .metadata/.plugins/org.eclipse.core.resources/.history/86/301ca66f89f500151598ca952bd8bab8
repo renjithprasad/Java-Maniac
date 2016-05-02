@@ -1,0 +1,14 @@
+package edu.neu.csye6200.ca;
+
+/**
+ * Created by Apurva on 3/29/2016.
+ */
+public class Simulation {
+    public static void main(String args[]){
+        CAGenerationSet caGenerationSet = CAGenerationSet.getInstance();
+        caGenerationSet.printFirstGeneration();
+        for (int i=0;i<64;i++){
+        caGenerationSet.applyRulesForNextGeneration();
+        }
+    }
+}

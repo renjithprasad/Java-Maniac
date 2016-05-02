@@ -1,0 +1,56 @@
+package edu.neu.csye6200.ca;
+
+//import java.util.ArrayList;
+
+/**
+ * Created by Apurva on 3/28/2016.
+ */
+public class CAGenerationSet {
+	public CAGeneration caGeneration;
+    private static CAGenerationSet caGenerationSet;
+
+    private CAGenerationSet() {
+    	caGeneration = new CAGeneration();
+    }
+
+    public static CAGenerationSet getInstance() {
+        if (caGenerationSet == null) {
+            caGenerationSet = new CAGenerationSet();
+        }
+        return caGenerationSet;
+    }
+
+    public void printFirstGeneration() {
+    	CACell[] caCell = caGeneration.getCaCells();
+        System.out.println("Printing Generation "+caCell[0].getGeneration());
+        caGeneration.printCaCells();
+    }
+    public void applyRulesForNextGeneration() {
+        /*for (CAGeneration caGeneration :
+                caGenerationArrayList) {*/
+            CACell[] caCell = caGeneration.getCaCells();
+            //System.out.println("Printing Generation "+caCell[0].getGeneration());
+            //caGeneration.printCaCells();
+            if (caCell != null) {
+                CACell[] newCells = new CACell[caCell.length];
+                for (int i = 1; i < caCell.length - 1; i++) {
+                    int left = caCell[i - 1].getState();
+                    int middle = caCell[i].getState();
+                    int right = caCell[i + 1].getState();
+
+                    int newState = CARule.getNextState(left, middle, right);
+                    newCells[i] = new CACell(i, newState);
+                    newCells[i].increaseGenerationNo();
+                }
+                newCells[0] = caCell[0];
+                newCells[0].increaseGenerationNo();
+                newCells[caCell.length - 1] = caCell[caCell.length - 1];
+                newCells[caCell.length - 1].increaseGenerationNo();
+                caGeneration.setCaCells(newCells);
+                System.out.println("\nPrinting Generation "+newCells[0].getGeneration());
+                caGeneration.printCaCells();
+
+            }
+        //}
+    }
+}

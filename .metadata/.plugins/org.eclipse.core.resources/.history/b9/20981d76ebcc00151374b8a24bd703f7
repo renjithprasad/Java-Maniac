@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class VehicleRegistry {
+	
+	private static ArrayList<Vehicle> carList = new ArrayList<Vehicle>();
+	HashMap<String, Vehicle> vehicleMap = new HashMap<String, Vehicle>();
+	
+	public ArrayList<Vehicle> getCarList() {
+		return carList;
+	}
+
+	public void setCarList(ArrayList<Vehicle> carList) {
+		this.carList = carList;
+	}
+
+	public boolean remove(Object o) {
+		return carList.remove(o);
+	}
+	
+	public void display () {
+		System.out.println("Here you go, you have the vehicle details!!!!");
+		for (int i = 0; i < carList.size(); i++) {
+			 System.out.println(carList.get(i));
+			 
+			 }
+	}
+	public static void main(String[] args) {
+		Vehicle bike = new Vehicle(1,10,"bajaj","pulsar",2013,50,"VGB 32");
+	    Vehicle auto = new Vehicle(2,10,"benz","sg300",2012,20,"IND 42");
+	    Vehicle car = new Vehicle(3,35,"bmw","550d",2012,17,"AUS N30");
+	    Vehicle jeep = new Vehicle(4,25,"wilson","20f",2012,8,"IND 99");
+	    carList.add(bike);
+	    carList.add(auto);
+	    carList.add(car);
+	    carList.add(jeep);
+	}
+
+}

@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class createvm {
+	public static void main(String[] args) {
+		
+	}
+	
+	public class vmServer{
+		List<Vm> a = new ArrayList<Vm>();
+	}
+	
+	
+	
+	
+	
+	public class Vm{
+		private int i =0;
+		
+		public Vm(int a){
+			this.i = a;
+		}
+	}
+}

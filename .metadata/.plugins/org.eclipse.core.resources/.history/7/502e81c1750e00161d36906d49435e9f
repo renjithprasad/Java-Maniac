@@ -1,0 +1,30 @@
+
+public class setImplementation {
+	int index;
+	private int[] elements;
+	
+	public setImplementation(int size) {
+		index = 0;
+		elements = new int[size];
+	}
+	
+	public void add(int number){
+		for(int i=0;i<index;i++){
+			if(elements[i] != number){
+				continue;
+			} else {
+				break;
+			}
+		}
+		elements[index++] = number;
+	}
+	
+	public void delete(int index){
+		elements[index] = 0;
+	}
+	
+	public int size(){
+		return index;
+	}
+	
+}

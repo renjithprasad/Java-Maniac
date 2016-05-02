@@ -1,0 +1,51 @@
+package edu.neu.csye6200.ca;
+
+//import java.util.ArrayList;
+
+/**
+ * Created by Apurva on 3/28/2016.
+ */
+public class CAGenerationSet {
+	public CAGeneration caGeneration;
+    private static CAGenerationSet caGenerationSet;
+
+    private CAGenerationSet() {
+    	caGeneration = new CAGeneration();
+    }
+
+    public static CAGenerationSet getInstance() {
+        if (caGenerationSet == null) {
+            caGenerationSet = new CAGenerationSet();
+        }
+        return caGenerationSet;
+    }
+
+    public void printFirstGeneration() {
+    	CACell[] caCell = caGeneration.getCaCells();
+        System.out.println("Printing Generation "+caCell[0].getGeneration());
+        caGeneration.printCaCells();
+    }
+    public void applyRulesForNextGeneration() {
+            CACell[] caCell = caGeneration.getCaCells();
+            if (caCell != null) {
+                CACell[] newCaGenerationCells = new CACell[caCell.length];
+                for (int i = 1; i < caCell.length - 1; i++) {
+                    int left = caCell[i - 1].getState();
+                    int middle = caCell[i].getState();
+                    int right = caCell[i + 1].getState();
+
+                    int newState = CARule.NextGenState(left, middle, right);
+                    newCaGenerationCells[i] = new CACell(i, newState);
+                    newCaGenerationCells[i].increaseGenerationNo();
+                }
+                newCaGenerationCells[0] = caCell[0];
+                newCaGenerationCells[0].increaseGenerationNo();
+                newCaGenerationCells[caCell.length - 1] = caCell[caCell.length - 1];
+                newCaGenerationCells[caCell.length - 1].increaseGenerationNo();
+                caGeneration.setCaCells(newCaGenerationCells);
+                System.out.println("\nPrinting Generation "+newCaGenerationCells[0].getGeneration());
+                caGeneration.printCaCells();
+
+            }
+    }
+}
